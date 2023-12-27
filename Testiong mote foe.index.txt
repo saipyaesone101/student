@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons as Image Keys</title>
+    <style>
+        body {
+            font-family: 'Padauk', Arial, sans-serif; /* 'Padauk' is a popular Unicode font for Myanmar */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            display: none; /* Initially hide images */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>မောင်ပြည့်စုံအားမုန့်ဖိုးပေးရန်</h1>
+    </header>
+
+    <button onclick="showImage('image1')">
+        ပေးမည်
+    </button>
+
+    <button onclick="showImage('image2')">
+        မပေးပါ
+    </button>
+
+    <img id="image1" src="https://cdn5.vectorstock.com/i/1000x1000/82/09/happy-kid-cartoon-vector-20988209.jpg" alt="Image 1">
+    <img id="image2" src="https://i.pinimg.com/originals/bc/bf/dd/bcbfddcf08949f4da90913101dbf1a54.jpg" alt="Image 2">
+
+    <script>
+        function showImage(imageId) {
+            // Hide all images
+            document.querySelectorAll('img').forEach(img => img.style.display = 'none');
+            
+            // Show the selected image
+            document.getElementById(imageId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
